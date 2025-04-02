@@ -1,0 +1,38 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ma liste de course</title>
+    <script type="module" src="./src/liste.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <nav class="p-4 bg-white shadow flex justify-between">
+        <h1 class="text-xl font-bold">COURSESAPP</h1>
+        <a href="/index.html" class="text-blue-600 hover:underline">Produits disponibles</a>
+    </nav>
+    <main class="p-6">
+        <h2 class="text-2xl font-bold mb-4">Ma liste de course</h2>
+        <table class="w-full bg-white rounded shadow overflow-hidden">
+            <thead class="bg-gray-100">
+                <tr>
+                    <th class="p-2">Produit</th>
+                    <th class="p-2">PU (€)</th>
+                    <th class="p-2">Quantité</th>
+                    <th class="p-2">Sous-total</th>
+                    <th class="p-2">Action</th>
+                </tr>
+            </thead>
+            <tbody id="liste-course-body"></tbody>
+        </table>
+        <div class="mt-4 text-lg font-semibold">
+            💰 Total général : <span id="total-general">0.00 €</span>
+        </div>
+        <button id="vider-liste" class="mt-4 px-4 py-2 bg-red-100 text-red-700 rounded hover:bg-red-200">VIDER LA
+            LISTE</button>
+    </main>
+</body>
+
+</html>

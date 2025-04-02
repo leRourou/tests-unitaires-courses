@@ -1,19 +1,33 @@
-<!doctype html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+  <title>Produits disponibles</title>
+  <script type="module" src="./src/main.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-100 flex flex-col items-center min-h-screen m-8">
-  <h1 class="text-3xl font-bold">
-    Ma super liste de courses
-  </h1>
-  <div id="app">
-  </div>
-  <script type="module" src="/src/main.js"></script>
+<body class="bg-gray-100">
+  <nav class="p-4 bg-white shadow flex justify-between">
+    <h1 class="text-xl font-bold">COURSESAPP</h1>
+    <a href="/liste.html" class="text-blue-600 hover:underline">Liste de course</a>
+  </nav>
+  <main class="p-6">
+    <div class="flex justify-between items-center mb-4">
+      <h1 class="text-2xl font-bold">Produits disponibles</h1>
+      <span id="compteur-produits" class="text-white bg-blue-600 rounded-full px-3 py-1 text-sm">0 produits</span>
+    </div>
+    <div class="flex gap-2 mb-4">
+      <input id="recherche" type="text" placeholder="Rechercher un produit..." class="p-2 border rounded flex-1" />
+      <select id="tri" class="p-2 border rounded">
+        <option value="nom">Trier par nom</option>
+        <option value="prix">Trier par prix</option>
+      </select>
+      <button id="reset-filtres" class="p-2 border rounded bg-white hover:bg-gray-200">RÉINITIALISER</button>
+    </div>
+    <ul id="liste-produits" class="grid grid-cols-1 md:grid-cols-3 gap-4"></ul>
+  </main>
 </body>
 
 </html>
